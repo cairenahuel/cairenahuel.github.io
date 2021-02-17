@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#navbar {
+  width: 100px;
+  height: 200px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+#welcome-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e85849;
+}
+
+#about {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #735872;
+}
+
+#projects {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f5db98;
+}
+
+#btnGithub {
+  width: 100px;
+  background-color: #e85849;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#contact {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #4bc4ac;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.spaceEvenly {
+  justify-content: space-evenly;
+}
+
+.contactTile {
+  width: 200px;
+  height: 200px;
+  background-color: #735872;
+}
+
+.project-tile {
+  width: 300px;
+  height: 550px;
+  background-color: #e85849;
+  margin: 85px 50px;
+}
+
+p {
+  width: 50%;
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.red {
+  background-color: #e85849;
+}
+.purple {
+  background-color: #735872;
+}
+.yellow {
+  background-color: #f5db98;
+}
+.cyan {
+  background-color: #4bc4ac;
+}
+
+@media (max-width: 600px){
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        width: 100vw;
+        position: fixed;
+        top:0px;
+    }
+    #navbar>.mobilenav{
+        width: 25%;
+    }
+    p{
+        margin: 10%;
+        width: 80%;
+    }
+    #contact{
+        flex-direction: column;
+    }
+    .contactTile{
+        margin: 50px;
+    }
+}
