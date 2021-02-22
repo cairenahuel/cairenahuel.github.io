@@ -3,34 +3,68 @@
   box-sizing: border-box;
   font-family: "Titillium Web", sans-serif;
 }
-body{
+body {
   background-color: black;
 }
 
+  /* =================================== */
+  /* ==========*== Mobile ==*=========== */
+  /* =================================== */
+
 #navbar {
-  width: 100px;
-  height: 200px;
+  display: flex;
+  height: fit-content;
+  width: 100vw;
   position: fixed;
   top: 0px;
-  left: 0px;
+  -webkit-backface-visibility: hidden;
+}
+#navbar > .mobilenav {
+  display: block;
+  text-align: center;
+  width: 25%;
+  height: 24px;
 }
 
-#welcome-section {
-  width: 100vw;
-  height: 100vh;
-  background-color: #e85849;
+p,
+h2 {
+  margin: 10% auto;
+  width: 80%;
+  text-align: center;
 }
 
-#about {
+p {
+  width: 50%;
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+  /* ------------------------------------------ */
+  /* ------------- General Things ------------- */
+  /* ------------------------------------------ */
+
+
+  /* ------------- ID's ------------- */
+
+#welcome-section, 
+#about, 
+#projects, 
+#contact {
   width: 100vw;
   min-height: 100vh;
-  background-color: #735872;
 }
 
-#projects {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: #f5db98;
+#projects,
+#contact {
+  flex-direction: column;
 }
 
 #btnGithub {
@@ -40,11 +74,7 @@ body{
   margin-bottom: 25px;
 }
 
-#contact {
-  width: 100vw;
-  min-height: 100vh;
-  background-color: #4bc4ac;
-}
+  /* ------------- Classes ------------- */
 
 .flex {
   display: flex;
@@ -62,8 +92,10 @@ body{
 }
 
 .contactTile {
-  width: 200px;
+  margin: 50px;
+  width: 500px;
   height: 200px;
+  margin: auto;
   background-color: #735872;
 }
 
@@ -74,19 +106,13 @@ body{
   margin: 85px 50px;
 }
 
-p {
-  width: 50%;
-  font-size: 1.5em;
+.shadow {
+  box-shadow: 5px 5px 20px rgba(40, 40, 40, 0.3),
+    2px 2px 5px rgba(10, 10, 10, 0.4);
 }
 
-h1 {
-  font-size: 3em;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
+ /* ------------- Background color classes ------------ */
+ /* ------------I should start using ssas :( ---------- */
 
 .red {
   background-color: #e85849;
@@ -101,39 +127,31 @@ a {
   background-color: #4bc4ac;
 }
 
-@media (max-width: 600px){
+/* ==================================== */
+/* ==========*== Desktop ==*=========== */
+/* ==================================== */
 
-      #navbar{
-        display:block;
-        height: fit-content;
-        width: 100vw;
-        position: fixed;
-        top:0px;
-        -webkit-backface-visibility: hidden;
-    }
-    #navbar>.mobilenav{
-        display: inline-block;
-        text-align: center;
-        width: 25%;
-        height: 24px;
-    }
-    p, h2{
-        margin: 10% auto;
-        width: 80%;
-        text-align: center;
-    }
-    #contact{
-        flex-direction: column;
-    }
-    .contactTile{
-        margin: 50px;
-    }
+@media (min-width: 600px) {
 
-    #projects{
-      flex-direction: column;
-    }
+  #navbar {
+    width: 100px;
+    height: 200px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-direction: column;
+  }
+  #navbar > .mobilenav {
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 24px;
+  }
 
-    .project-tile{
-      margin: 50px auto;
-    }
+  p,
+  h2 {
+  margin: 10% auto;
+  width: 80%;
+  text-align: center;
+}
 }
